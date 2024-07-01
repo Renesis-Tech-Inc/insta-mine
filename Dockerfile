@@ -48,7 +48,7 @@ COPY . .
 WORKDIR /app/src
 
 # Expose the application port
-EXPOSE 3000
+EXPOSE 8000
 
 # Run the FastAPI application using Uvicorn
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
