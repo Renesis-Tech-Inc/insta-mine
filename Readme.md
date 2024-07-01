@@ -1,3 +1,7 @@
+Here is the updated README file with added Docker instructions:
+
+---
+
 # InstaMiner - Instagram User Profile Data Miner
 
 ## Project Overview
@@ -55,18 +59,19 @@ insta-mine/
     - `services.py`: Service layer for fetching user data from Instagram API
   - `main.py`: Main FastAPI application
 
-
 ## Development
+
+### Running the Development Server
 
 To run the development server:
 
 ```bash
-make run
+make run-local
 ```
 
-This will start the FastAPI server on `http://localhost:8000`.
+This will start the FastAPI server on `http://localhost:3000`.
 
-## Formatting
+### Formatting
 
 To run the code formatting:
 
@@ -74,11 +79,63 @@ To run the code formatting:
 make format
 ```
 
-This will format code.
+This will format code using Black.
 
-## Environment Variables
+### Environment Variables
 
 Before running the application, create a `.env` file based on the `.env.example` file and fill in the required environment variables.
+
+## Docker
+
+### Building the Docker Image
+
+To build the Docker image:
+
+```bash
+make docker-build
+```
+
+### Running the Docker Container
+
+To run the Docker container:
+
+```bash
+make docker-run
+```
+
+This command will start the container and expose it on port 3000.
+
+### Stopping the Docker Container
+
+To stop the Docker container:
+
+```bash
+make docker-stop
+```
+
+### Removing the Docker Container
+
+To remove the Docker container:
+
+```bash
+make docker-remove
+```
+
+### Cleaning Docker Images
+
+To remove the Docker image:
+
+```bash
+make docker-clean
+```
+
+### Rebuilding and Running the Docker Container
+
+To rebuild and run the Docker container:
+
+```bash
+make docker-rebuild
+```
 
 ## Contributing
 

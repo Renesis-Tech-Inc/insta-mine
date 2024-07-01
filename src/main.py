@@ -75,11 +75,8 @@ async def health_check():
 # Import routers from domain functionalities
 from modules.miner.endpoints import router
 
-# from src.domain.items.routers import item_router
-
 # Mount routers onto the main application
 app.include_router(router)
-# app.include_router(item_router)
 
 if __name__ == "__main__":
     import uvicorn
